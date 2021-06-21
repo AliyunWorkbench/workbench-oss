@@ -31,11 +31,14 @@ const fg = require('fast-glob');
         const res = await Promise.all(
           files.map(file => {
             const filename = file.replace(`${assetPath}/`, '')
-            return oss.put(`${targetPath}/${filename}`, resolve(file))
+            oss.put(`${targetPath}/${filename}`, resolve(file)).then(() => {
+              oss.putACL(`${targetPath}/${filename}`, 'public-read');
+            });
           })
         )
         core.info('OSS result:');
-        core.info(res.map(r => r.url).join(','));
+        core.info(res.map(r => r.url).join('\n'));
+        core.info('OSS result end!');
         // core.setOutput('url', res.map(r => r.url).join(','))
       }
     } else {
