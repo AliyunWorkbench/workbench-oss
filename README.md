@@ -21,7 +21,7 @@
 ```yaml
 - name: Upload to Aliyun oss
   id: upload_to_oss
-  uses: royalrover/upload-to-oss@master
+  uses: royalrover/workbench-oss@master
   with:
     ACCESS_KEY: ${{ secrets.OSS_KEY_ID }}
     ACCESS_SECRET: ${{ secrets.OSS_KEY_SECRET }}
