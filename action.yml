@@ -1,0 +1,25 @@
+
+name: 'Upload assets to OSS'
+description: 'Upload assets to Alibaba Cloud OSS'
+branding:
+  icon: 'upload-cloud'
+  color: 'yellow'
+inputs:
+  ACCESS_KEY:
+    required: true
+  ACCESS_SECRET:
+    required: true
+  OSS_REGION:
+    required: true  
+  OSS_BUCKET:
+    required: true
+  OSS_PATH:
+    required: true
+  UPLOAD_PATH:
+    required: true
+outputs:
+  url:
+    description: oss url
+runs:
+  using: 'node12'
+  main: 'lib/index.js'

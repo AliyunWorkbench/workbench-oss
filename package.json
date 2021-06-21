@@ -1,0 +1,19 @@
+{
+  "name": "workbench-upload-to-oss",
+  "version": "0.3.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -m -o lib"
+  },
+  "keywords": [],
+  "author": "aliyun-workbench",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "@vercel/ncc": "^0.25.1",
+    "ali-oss": "^6.6.0",
+    "fast-glob": "^3.2.4"
+  }
+}
