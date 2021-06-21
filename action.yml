@@ -3,7 +3,7 @@ name: 'Upload assets to OSS'
 description: 'Upload assets to Alibaba Cloud OSS'
 branding:
   icon: 'upload-cloud'
-  color: 'yellow'
+  color: 'white'
 inputs:
   ACCESS_KEY:
     required: true
