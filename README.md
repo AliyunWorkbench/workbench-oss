@@ -23,10 +23,10 @@
   id: upload_to_oss
   uses: royalrover/workbench-oss@master
   with:
-    ACCESS_KEY: ${{ secrets.OSS_KEY_ID }}
-    ACCESS_SECRET: ${{ secrets.OSS_KEY_SECRET }}
-    OSS_REGION: oss-cn-hangzhou
+    ACCESS_KEY: ${{ secrets.AK }}
+    ACCESS_SECRET: ${{ secrets.SK }}
+    OSS_REGION: oss-cn-shanghai
     OSS_BUCKET: taobao
+    OSS_PATH: /order/
     UPLOAD_PATH: ./build
-    target-path: /order/
 ```

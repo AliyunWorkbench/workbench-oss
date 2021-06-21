@@ -10,8 +10,8 @@ const fg = require('fast-glob');
     const opts = {
       accessKeyId: core.getInput('ACCESS_KEY'),
       accessKeySecret: core.getInput('ACCESS_SECRET'),
-      ossRegion: core.getInput('OSS_REGION'),
-      ossBucket: core.getInput('OSS_BUCKET')
+      region: core.getInput('OSS_REGION'),
+      bucket: core.getInput('OSS_BUCKET')
     };
     const oss = new OSS(opts);
 
