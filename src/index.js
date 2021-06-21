@@ -31,7 +31,7 @@ const fg = require('fast-glob');
         const res = await Promise.all(
           files.map(file => {
             const filename = file.replace(`${assetPath}/`, '')
-            oss.put(`${targetPath}/${filename}`, resolve(file)).then((res) => {
+            return oss.put(`${targetPath}/${filename}`, resolve(file)).then((res) => {
               oss.putACL(`${targetPath}/${filename}`, 'public-read');
               return res;
             });
