@@ -1,5 +1,5 @@
 
-name: 'Upload assets to OSS'
+name: 'Upload assets to Alibaba Cloud OSS'
 description: 'Upload assets to Alibaba Cloud OSS'
 branding:
   icon: 'upload-cloud'
